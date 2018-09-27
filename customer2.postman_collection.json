@@ -1,6 +1,7 @@
 {
 	"id": "c95ddadc-c986-934e-395b-39803c29dd61",
 	"name": "customer2",
+	"description": "version=1.0 //don't know why, a bug in Microcks",
 	"order": [],
 	"folders": [
 		{
@@ -17,10 +18,12 @@
 			"folders_order": []
 		}
 	],
+	"folders_order": [
+		"812177fa-8355-5ac9-b376-6aa8793474f6"
+	],
 	"timestamp": 1413302258635,
 	"owner": "3387292",
-	"folders_order": [],
-	"hasRequests": true,
+	"public": false,
 	"requests": [
 		{
 			"id": "23d33581-b7c3-2d6c-07cf-b7378810ff75",
