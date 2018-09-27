@@ -1,0 +1,88 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "customer2",
+    "version" : "1.0.0"
+  },
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/customer2" : {
+      "get" : {
+        "summary" : "get customers",
+        "description" : "gets customers",
+        "responses" : {
+          "200" : {
+            "description" : "OK when thing is successful",
+            "schema" : {
+              "$ref" : "#/definitions/customer2"
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "update customer",
+        "description" : "update customer",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "should be of type customer",
+          "schema" : {
+            "$ref" : "#/definitions/customer2"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "when thing is good ",
+            "schema" : {
+              "$ref" : "#/definitions/customer2"
+            }
+          }
+        }
+      },
+      "post" : {
+        "summary" : "create new customers",
+        "description" : "create new customers",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "type of customer",
+          "schema" : {
+            "$ref" : "#/definitions/customer2"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "when thing is good",
+            "schema" : {
+              "$ref" : "#/definitions/customer2"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "customer2" : {
+      "title" : "Root Type for customer2",
+      "description" : "The root of the customer2 type's schema.",
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "region" : {
+          "type" : "string"
+        }
+      },
+      "example" : "{\n\t\"name\": \"Red Hat in Middleware\",\n\t\"category\": \"gold\",\n\t\"id\": 2,\n\t\"region\": \"North America\"\n}"
+    }
+  }
+}
