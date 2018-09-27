@@ -1,0 +1,151 @@
+{
+	"id": "c95ddadc-c986-934e-395b-39803c29dd61",
+	"name": "customer2",
+	"order": [],
+	"folders": [
+		{
+			"id": "812177fa-8355-5ac9-b376-6aa8793474f6",
+			"name": "customer2",
+			"description": "Folder for customer2",
+			"order": [
+				"5d159415-5050-e2af-b5fd-b1d08dfb4300",
+				"23d33581-b7c3-2d6c-07cf-b7378810ff75",
+				"d35b3807-ce51-ba2a-4996-baa9f67e60a4"
+			],
+			"owner": "3387292",
+			"collectionId": "c95ddadc-c986-934e-395b-39803c29dd61",
+			"folders_order": []
+		}
+	],
+	"timestamp": 1413302258635,
+	"owner": "3387292",
+	"folders_order": [],
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "23d33581-b7c3-2d6c-07cf-b7378810ff75",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http:///customer2",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"description": "update customer",
+			"descriptionFormat": "html",
+			"time": 1538077956672,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "c95ddadc-c986-934e-395b-39803c29dd61",
+			"name": "update customer",
+			"collection_id": "c95ddadc-c986-934e-395b-39803c29dd61",
+			"folder": "812177fa-8355-5ac9-b376-6aa8793474f6",
+			"rawModeData": "should be of type customer"
+		},
+		{
+			"id": "5d159415-5050-e2af-b5fd-b1d08dfb4300",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http:///customer2",
+			"folder": "812177fa-8355-5ac9-b376-6aa8793474f6",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var expectedName=\"My fav implementation kind\";\nvar jsonData = JSON.parse(responseBody);\nconsole.log(\"test1...\");\n\nvar schema={\n    \"type\": \"object\",\n    \"properties\": {\n        \"name\": { \"type\": \"string\", \"enum\": [expectedName] },\n        \"category\": {\"type\": \"string\"},\n        \"id\": {\"type\":\"number\"},\n        \"region\": {\"type\":\"string\"}\n    }\n};\n\ntests[\"Valid name in response\"] = tv4.validate(jsonData, schema);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1538078662178,
+			"name": "get customers",
+			"description": "gets customers",
+			"collectionId": "c95ddadc-c986-934e-395b-39803c29dd61",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"time": 0,
+					"headers": [],
+					"cookies": [],
+					"mime": "",
+					"text": "{\n\t\"name\": \"Let' mock a customer\",\n\t\"category\": \"gold\",\n\t\"id\": 3,\n\t\"region\": \"North America - Boston\"\n}",
+					"language": "",
+					"rawDataType": "",
+					"previewType": "parsed",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "get customers",
+					"id": "de74ee70-43b8-f1cc-bae9-3dc0454833ef",
+					"request": {
+						"url": "http:///customer2",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"enabled": true
+							}
+						],
+						"headers": "Accept: application/json\nContent-Type: application/json\n",
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			]
+		},
+		{
+			"id": "d35b3807-ce51-ba2a-4996-baa9f67e60a4",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "http:///customer2",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"description": "create new customers",
+			"descriptionFormat": "html",
+			"time": 1538077956672,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "c95ddadc-c986-934e-395b-39803c29dd61",
+			"name": "create new customers",
+			"collection_id": "c95ddadc-c986-934e-395b-39803c29dd61",
+			"folder": "812177fa-8355-5ac9-b376-6aa8793474f6",
+			"rawModeData": "type of customer"
+		}
+	]
+}
