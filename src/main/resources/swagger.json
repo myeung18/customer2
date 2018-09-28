@@ -1,0 +1,96 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "customer2"
+  },
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/customer2" : {
+      "get" : {
+        "summary" : "get customers",
+        "description" : "gets customers",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK when thing is successful",
+            "schema" : {
+              "$ref" : "#/definitions/customer2"
+            }
+          }
+        },
+        "x-accepts" : "application/json"
+      },
+      "post" : {
+        "summary" : "create new customers",
+        "description" : "create new customers",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "type of customer",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/customer2"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "when thing is good",
+            "schema" : {
+              "$ref" : "#/definitions/customer2"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      },
+      "put" : {
+        "summary" : "update customer",
+        "description" : "update customer",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "should be of type customer",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/customer2"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "when thing is good ",
+            "schema" : {
+              "$ref" : "#/definitions/customer2"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      }
+    }
+  },
+  "definitions" : {
+    "customer2" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "region" : {
+          "type" : "string"
+        }
+      },
+      "title" : "Root Type for customer2",
+      "description" : "The root of the customer2 type's schema.",
+      "example" : "{\n\t\"name\": \"Red Hat in Middleware\",\n\t\"category\": \"gold\",\n\t\"id\": 2,\n\t\"region\": \"North America\"\n}"
+    }
+  }
+}
