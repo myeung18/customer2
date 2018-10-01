@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "e5edd1af-c546-449e-9421-84f2defbccd3",
 		"name": "customer2",
-		"description": "Version=1.2   new version",
+		"description": "version=1.2   new version",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
