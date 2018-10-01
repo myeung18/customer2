@@ -2,8 +2,8 @@
 	"variables": [],
 	"info": {
 		"name": "customer2",
-		"_postman_id": "c95ddadc-c986-934e-395b-39803c29dd61",
-		"description": "version=1.0 //don't know why, a bug in Microcks",
+		"_postman_id": "3f7a8e10-9264-a1cc-d946-b00f02bfd890",
+		"description": "version=1.0 this is a service for all customer information",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -12,25 +12,26 @@
 			"description": "Folder for customer2",
 			"item": [
 				{
-					"name": "get customers",
+					"name": "gets customers",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"var expectedName=\"My fav implementation kind\";",
+									"var expectedName=\"My fav implmentation kind\";",
 									"var jsonData = JSON.parse(responseBody);",
-									"console.log(\"test1...\");",
+									"console.log(\"test1\");",
 									"",
-									"var schema={",
-									"    \"type\": \"object\",",
-									"    \"properties\": {",
-									"        \"name\": { \"type\": \"string\", \"enum\": [expectedName] },",
-									"        \"category\": {\"type\": \"string\"},",
-									"        \"id\": {\"type\":\"number\"},",
-									"        \"region\": {\"type\":\"string\"}",
-									"    }",
+									"var schema = {",
+									" \"type\": \"object\",",
+									" \"properties\": {",
+									"    \"name\": { \"type\": \"string\", \"enum\": [expectedName] },",
+									"    \"category\": { \"type\": \"string\" },",
+									"   ",
+									"    \"id\": { \"type\": \"number\" },",
+									"    \"region\": { \"type\": \"string\" }",
+									"  }",
 									"};",
 									"",
 									"tests[\"Valid name in response\"] = tv4.validate(jsonData, schema);"
@@ -41,70 +42,18 @@
 					"request": {
 						"url": "http:///customer2",
 						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
+						"header": [],
 						"body": {},
-						"description": "gets customers"
+						"description": "getting customer info"
 					},
-					"response": [
-						{
-							"id": "8700d2bc-b0d3-436d-9f2b-8dc81246ee35",
-							"name": "get customers",
-							"originalRequest": {
-								"url": "http:///customer2",
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "",
-							"_postman_previewtype": "parsed",
-							"header": [],
-							"cookie": [],
-							"responseTime": 0,
-							"body": "{\n\t\"name\": \"Let' mock a customer\",\n\t\"category\": \"gold\",\n\t\"id\": 3,\n\t\"region\": \"North America - Boston\"\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "update customer",
 					"request": {
 						"url": "http:///customer2",
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "should be of type customer"
@@ -114,7 +63,7 @@
 					"response": []
 				},
 				{
-					"name": "create new customers",
+					"name": "create a new customer",
 					"request": {
 						"url": "http:///customer2",
 						"method": "POST",
@@ -132,9 +81,9 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "type of customer"
+							"raw": "should be of type customer"
 						},
-						"description": "create new customers"
+						"description": "create a new customer"
 					},
 					"response": []
 				}
