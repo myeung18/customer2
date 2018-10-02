@@ -9,26 +9,27 @@
   "paths" : {
     "/customer2" : {
       "get" : {
-        "summary" : "get customers",
-        "description" : "gets customers",
+        "summary" : "gets customers",
+        "description" : "getting customer info",
         "parameters" : [ ],
         "responses" : {
           "200" : {
-            "description" : "OK when thing is successful",
+            "description" : "reply for a customer get",
             "schema" : {
               "$ref" : "#/definitions/customer2"
             }
           }
         },
+        "x-contentType" : "application/json",
         "x-accepts" : "application/json"
       },
       "post" : {
-        "summary" : "create new customers",
-        "description" : "create new customers",
+        "summary" : "create a new customer",
+        "description" : "create a new customer",
         "parameters" : [ {
           "in" : "body",
           "name" : "body",
-          "description" : "type of customer",
+          "description" : "should be of type customer",
           "required" : false,
           "schema" : {
             "$ref" : "#/definitions/customer2"
@@ -36,7 +37,7 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "when thing is good",
+            "description" : "response to a post customer request",
             "schema" : {
               "$ref" : "#/definitions/customer2"
             }
@@ -59,7 +60,7 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "when thing is good ",
+            "description" : "respones to a put customer request",
             "schema" : {
               "$ref" : "#/definitions/customer2"
             }
@@ -90,7 +91,7 @@
       },
       "title" : "Root Type for customer2",
       "description" : "The root of the customer2 type's schema.",
-      "example" : "{\n\t\"name\": \"Red Hat in Middleware\",\n\t\"category\": \"gold\",\n\t\"id\": 2,\n\t\"region\": \"North America\"\n}"
+      "example" : "\"{\\n    \\\"name\\\": \\\"Red hat with Polo\\\",\\n    \\\"category\\\": \\\"Super Gold\\\",\\n    \\\"id\\\": 2,\\n    \\\"region\\\": \\\"North America - Boston\\\"\\n}\""
     }
   }
 }
