@@ -6,10 +6,11 @@ public class DefaultApiImpl implements DefaultApi {
     @Override
     public Customer2 customer2Get() {
         Customer2 mycust=new Customer2();
-        mycust.setCategory("Gold");
+        mycust.setCategory("Go          ld");
         mycust.setName("Real Customer name will be stay here");
-        mycust.setRegion("AMER");
+        mycust.setRegion("AMERican");
         mycust.setId(5);
+        System.out.println("--------------------");
         return mycust;
     }
 
