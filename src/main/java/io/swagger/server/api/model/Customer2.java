@@ -1,6 +1,10 @@
 package io.swagger.server.api.model;
 
+import java.math.BigDecimal;
+import java.util.Formatter;
 import java.util.Objects;
+import java.util.concurrent.CompletableFuture;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -106,4 +110,9 @@ public class Customer2   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
+  public void test() {
+
+  }
+
 }
