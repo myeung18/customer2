@@ -2,8 +2,10 @@ pipeline {
     agent any
     stages {
         stage('myStage'){
-            steps {
-                sh 'ls -la' 
+            node('maven') {
+                steps {
+                    sh 'ls -la' 
+                }
             }
         }
         stage('Build') {
