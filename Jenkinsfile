@@ -5,7 +5,11 @@ pipeline {
                 steps {
                     sh 'ls -la' 
                     node('maven') {
-                        sh 'mvn --version'         
+                        sh '''
+                        mvn --version
+
+                        mvn package 
+                        '''         
                     }
             }
         }
