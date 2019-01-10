@@ -12,7 +12,6 @@ objects:
   metadata:
     labels:
     name: integration-pipeline
-    name: integration-pipeline
   spec:
     output: null
     postCommit: null
