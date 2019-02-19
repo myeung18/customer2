@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "2fa81ac5-5663-4e92-8aee-d73997004da2",
+		"name": "endpoint01",
+		"description": "version=1.0   endpoint release first version",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "endpoint01",
+			"item": [
+				{
+					"name": "gets endpoints01",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "63752f37-e1a2-4e90-8332-6f6c4650dc19",
+								"exec": [
+									"var expectedName=\"This Impl is for EndPoint\";",
+									"var jsonData = JSON.parse(responseBody);",
+									"console.log(\"test1 from endpoint\");",
+									"",
+									"var schema = {",
+									" \"type\": \"object\",",
+									" \"properties\": {",
+									"   \"name\": { \"type\": \"string\", \"enum\": [expectedName] },",
+									"    \"category\": { \"type\": \"string\" },",
+									"    \"id\": {\"type\": \"number\" },",
+									"   \"region\": {\"type\": \"string\" }",
+									"  }",
+									"};",
+									"",
+									"tests[\"Valid name in response\"] = tv4.validate(jsonData, schema);",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///endpoint01",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"endpoint01"
+							]
+						},
+						"description": "gets endpoints01"
+					},
+					"response": [
+						{
+							"name": "gets endpoints01",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http:///endpoint01",
+									"host": [
+										"http:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"endpoint01"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n\t\"name\": \"This is a Mock EndPoint\",\n\t\"category\": \"Gold plan for ep\",\n\t\"id\": 3,\n\t\"region\": \"East coast MA\"\n\n}"
+						}
+					]
+				},
+				{
+					"name": "update endpoints",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "send a type of endpoint"
+						},
+						"url": {
+							"raw": "http:///endpoint01",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"endpoint01"
+							]
+						},
+						"description": "update endpoint01"
+					},
+					"response": []
+				},
+				{
+					"name": "create a new endpoint",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "should be of type endpoint"
+						},
+						"url": {
+							"raw": "http:///endpoint01",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"endpoint01"
+							]
+						},
+						"description": "create a new endpoint"
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for endpoint01"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ebcd18e5-b49c-4a6d-b80a-f706e5f4a014",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "32fc9f21-0a88-487f-be72-f10a9e02df1f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
