@@ -1,0 +1,88 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "endpoint01",
+    "version" : "1.0.0"
+  },
+  "paths" : {
+    "/endpoint01" : {
+      "get" : {
+        "summary" : "gets endpoints01",
+        "description" : "gets endpoints01",
+        "responses" : {
+          "200" : {
+            "description" : "return endpoint01 only",
+            "schema" : {
+              "$ref" : "#/definitions/endpoint01"
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "update endpoints",
+        "description" : "update endpoint01",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "send a type of endpoint",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/endpoint01"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response with endpoint",
+            "schema" : {
+              "$ref" : "#/definitions/endpoint01"
+            }
+          }
+        }
+      },
+      "post" : {
+        "summary" : "create a new endpoint",
+        "description" : "create a new endpoint",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "should be of type endpoint",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/endpoint01"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "response a type of endpoint",
+            "schema" : {
+              "$ref" : "#/definitions/endpoint01"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "endpoint01" : {
+      "title" : "Root Type for endpoint01",
+      "description" : "The root of the endpoint01 type's schema.",
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "region" : {
+          "type" : "string"
+        }
+      },
+      "example" : "{\n\t\"name\": \"coding skill - endpoint\",\n\t\"category\": \"Gold plan\",\n\t\"id\": 2,\n\t\"region\": \"Boston\"\n}"
+    }
+  }
+}
